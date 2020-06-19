@@ -1,0 +1,13 @@
+[
+    "inputfile.laz",
+    {
+        "type":"filters.range",
+        "limits":"Classification[2:2]"
+    },
+    {
+        "type":"writers.gdal",
+        "filename":"outfile.tiff",
+        "resolution": 2,
+        "window_size": 10
+    }
+]
