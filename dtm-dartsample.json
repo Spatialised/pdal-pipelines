@@ -1,0 +1,18 @@
+[
+    "inputfile.laz",
+    {
+        "type": "filters.sample",
+        "radius": 1.5
+    },
+    {
+        "type":"filters.range",
+        "limits":"Classification[2:2]"
+    },
+    {
+        "type":"writers.gdal",
+        "filename":"outfile.tiff",
+        "resolution": 2,
+        "window_size": 10,
+        "output_type": "idw"
+    }
+]
