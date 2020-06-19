@@ -1,0 +1,33 @@
+[
+    {
+        "type":"readers.las",
+        "filename":"input.laz"
+    },
+    {
+        "type":"filters.assign",
+        "assignment":"Classification[:]=0"
+    },
+    {
+        "type":"filters.elm",
+        "cell": 10
+    },
+    {
+        "type":"filters.csf",
+        "resolution": 5,
+        "rigidness": 5,
+        "smooth": true,
+        "ignore": "Classification[7:7]"
+    },
+    {
+        "type":"filters.hag_delaunay",
+        "count": 64,
+        "allow_extrapolation": true
+    },
+	{
+        "type": "writers.las",
+        "minor_version": "4",
+        "dataformat_id": "7",
+        "extra_dims": "all",
+        "filename": "elm-csf-hag.laz"
+    }
+]

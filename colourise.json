@@ -1,0 +1,17 @@
+[
+        "infile.las",
+        {
+            "type": "filters.colorization",
+            "raster": "input-raster.tif"
+        },
+	{
+            "type": "filters.range",
+            "limits": "Red[1:]"
+        },
+	{
+            "type": "writers.las",
+            "minor_version": "4",
+            "dataformat_id": "7",
+            "filename": "output.laz"
+        }
+    ]
