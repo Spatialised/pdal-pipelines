@@ -1,0 +1,12 @@
+[
+    "inputfile.laz",
+    {
+        "type" : "filters.reprojection",
+        "out_srs":"EPSG:4326"
+    },
+    {
+        "type" : "filters.hexbin",
+        "edge_size": 10,
+        "threshold": 15
+    },
+]

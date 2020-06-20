@@ -1,0 +1,17 @@
+[
+    "inputfile.laz",
+    {
+        "type": "filters.sample",
+        "radius": 1.5
+    },
+    {
+        "type":"filters.range",
+        "limits":"Classification[3:5], HeightaboveGround[3:]"
+    },
+    {
+        "type":"writers.gdal",
+        "filename":"outfile.tiff",
+        "resolution": 2,
+        "dimension": "HeightAboveGround"
+    }
+]

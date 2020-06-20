@@ -1,0 +1,24 @@
+[
+    "inputfile.laz",
+    {
+        "type": "filters.sample",
+        "radius": 1.5
+    },
+    {
+        "type":"filters.range",
+        "limits":"Classification[3:5], HeightaboveGround[3:]"
+    },
+    {
+        "type" : "filters.hexbin",
+        "edge_size": 10,
+        "threshold": 15
+    },
+    {
+        "type":"writers.las",
+        "filename":"outfile.laz",
+        "extra_dims": "all",
+        "minor_version": 4,
+        "dataformat_id": 7,
+        "a_srs": "EPSG:28355+5711"
+    }
+]
